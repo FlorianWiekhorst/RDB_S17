@@ -16,24 +16,47 @@
   </head>
 
   <body>
-  <h1>Stadtteilvergleicher</h1>
+  <h1 id="headerTwo">Stadtteilvergleicher</h1>
+  <a id="backButton" href="HamburgMap.html" class="btn btn-default btn-lg" role="button">Zurück zur Karte von Hamburg</a>
+ 
+<h1>Welche Parameter möchten Sie vergleichen?</h1>
+ <section id="Parameter">
+	<select name="para1">
+		<option value="Wahlbeteiligung">Wahlbeteiligung</option>
+		<option value="Einkommen">Einkommen</option>
+		<option value="Wohnfläche">Wohnfläche</option>
+		<option value="Geburten">Geburten</option>
+	</select> 
+	
+	<select name="para2">
+		<option value="Wahlbeteiligung">Wahlbeteiligung</option>
+		<option value="Einkommen">Einkommen</option>
+		<option value="Wohnfläche">Wohnfläche</option>
+		<option value="Geburten">Geburten</option>
+	</select> 
+	
+	<select name="para3">
+		<option value="Wahlbeteiligung">Wahlbeteiligung</option>
+		<option value="Einkommen">Einkommen</option>
+		<option value="Wohnfläche">Wohnfläche</option>
+		<option value="Geburten">Geburten</option>
+	</select> 
+	
+ </section>
 	<section>	   
 			<div id="parent">
-				<div id="wide"> <!-- Hauptfläche mit Map -->
-				<img src="bezirke_gravit.io.svg" height="700" alt="nice map"/>
-				</svg>
+				<div id="wideVergleicher"> <!-- Hauptfläche der Balkendiagramme -->
+				
 				</div>
 				
 				
-				<div id="narrow"> <!-- Seitenbereich mit den Angaben -->
-					<h3 id="stadtteilname">Name Stadtteil</h3>
-					<div id="werte">
-						<p>Einwohner</p>
-						<p>Fläche</p>
-						<p>Todesfälle</p>
-						<p>PKW</p>
-					</div>
-					<a href="HamburgMap.html" class="btn btn-default btn-lg btn-block" role="button">Zurück zur Karte von Hamburg</a>
+				<div id="narrowVergleicher"> <!-- Seitenbereich mit den Auswahlmöglichkeiten -->
+					<select>
+						<option value="Niendorf">Niendorf</option>
+						<option value="Wandsbek">Wandsbek</option>
+						<option value="Hamm">Hamm</option>
+						<option value="Lokstedt">Lokstedt</option>
+					</select> 
 				</div>
 			</div>
 	</section>
