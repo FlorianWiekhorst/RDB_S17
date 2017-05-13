@@ -1,0 +1,74 @@
+/* Our Css collection */
+
+section {		
+	float: middle;
+	padding: auto;
+    text-align: center;
+}
+
+h1 {
+    display: block;
+	font-size: 4em;
+	margin-top: 1.2em;
+	margin-bottom: 0.7em;
+	text-align: center;
+	font-weight: bold;
+} 
+
+h2 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	font-size: 1em;
+}
+
+body {
+	background: #92bda3;
+	margin: 20px;
+}
+
+
+#parent {
+	display: flex;
+}
+
+#narrow {
+	width: 35%;
+	background: grey;
+	margin-right: 250px;
+	border: 3px solid black;
+}
+
+#wide {
+	flex: 1;
+	background: white;
+	margin-left: 250px;
+	border-left: 3px solid black;
+	border-bottom: 3px solid black;
+	border-top: 3px solid black;
+}
+
+#werte {
+	margin-right: 70px;
+	margin-left: 70px;
+	margin-top: 70px;
+	background: #fffbbd;
+}
+
+#stadtteilname {
+	margin-top: 85px;
+	font-size: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
