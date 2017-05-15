@@ -1,11 +1,4 @@
 /* Our Css collection */
-
-section {		
-	float: middle;
-	padding: auto;
-    text-align: center;
-}
-
 h1 {
     display: block;
 	font-size: 4em;
@@ -29,21 +22,25 @@ body {
 	margin: 20px;
 }
 
+svg {
+	float: left;
+	margin-left: 250px;
+}
 
 #parent {
 	display: flex;
 }
 
-#narrow {
-	width: 35%;
-	background: grey;
+#narrow { /* roter Background testweise */
+	width: 30%;
+	background: #771212;
 	margin-right: 250px;
 	border: 3px solid black;
 }
 
 #wide {
 	flex: 1;
-	background: white;
+	background: #efefef;
 	margin-left: 250px;
 	border-left: 3px solid black;
 	border-bottom: 3px solid black;
@@ -57,18 +54,86 @@ body {
 	background: #fffbbd;
 }
 
+
+/* Stadtteilvergleicher Seite */
+#wideVergleicher {
+	flex: 1;
+	margin-right: 250px;
+	border-left: 3px solid black;
+	border-bottom: 3px solid black;
+	border-top: 3px solid black;
+}
+#narrowVergleicher {
+	width: 30%;
+	background: grey;
+	margin-left: 250px;
+	border: 3px solid black;
+}
+
+
+
 #stadtteilname {
 	margin-top: 85px;
 	font-size: 3em;
 }
 
+#backButton {
+	float: left;
+}
+
+#headerTwo {
+	margin: 0;
+    display: inline-block;
+}
+
+#Parameter {
+	display: inline-block;
+	max-width: 50px;
+	max-height: 50px;
+	width: 50px !important;
+}
+
+select#para1,
+select#para2,
+select#para3 {
+    max-width: 50px;
+	max-height: 50px;
+	width: 50px !important;
+}
+
+#para1 option {
+	font-size: 12px;
+	width: 150px;
+}
 
 
+.background {
+  fill: #efefef;
+  pointer-events: all;
+}
 
+.map-layer {
+  fill: #efefef;
+  stroke: #aaa;
+}
 
+.effect-layer{
+  pointer-events:none;
+}
 
+text{
+  font-family: 'Helvetica Neue';
+  font-weight: 300;
+}
 
+text.big-text{
+  font-size: 30px;
+  font-weight: 400;
+}
 
+.effect-layer text, text.dummy-text{
+  font-size: 12px;
+}
 
 
 
