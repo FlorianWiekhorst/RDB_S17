@@ -6,6 +6,7 @@ h1 {
 	margin-bottom: 0.7em;
 	text-align: center;
 	font-weight: bold;
+	color: white;
 } 
 
 h2 {
@@ -17,18 +18,33 @@ p {
 	font-size: 1em;
 }
 
-body {
-	background: #92bda3;
+body, html{
+    height: 80%;
+	background: #444444;
 	margin: 20px;
 }
 
 svg {
 	float: left;
-	margin-left: 250px;
+	margin-left: 253px;
+	margin-top: -663px;
+	position: absolute; z-index:1;  
+	background: #FFF;
+}
+
+path {
+    fill:none;
+    stroke:black;
+    pointer-events:all;
+}
+
+path:hover {
+	fill: red;
 }
 
 #parent {
 	display: flex;
+	height: 110%;
 }
 
 #narrow { /* roter Background testweise */
@@ -40,7 +56,7 @@ svg {
 
 #wide {
 	flex: 1;
-	background: #efefef;
+	background: #FFF;
 	margin-left: 250px;
 	border-left: 3px solid black;
 	border-bottom: 3px solid black;
@@ -54,67 +70,24 @@ svg {
 	background: #fffbbd;
 }
 
-
-/* Stadtteilvergleicher Seite */
-#wideVergleicher {
-	flex: 1;
-	margin-right: 250px;
-	border-left: 3px solid black;
-	border-bottom: 3px solid black;
-	border-top: 3px solid black;
-}
-#narrowVergleicher {
-	width: 30%;
-	background: grey;
-	margin-left: 250px;
-	border: 3px solid black;
-}
-
-
-
 #stadtteilname {
+	text-align: center;
 	margin-top: 85px;
 	font-size: 3em;
+	color: white;
 }
 
 #backButton {
 	float: left;
 }
 
-#headerTwo {
-	margin: 0;
-    display: inline-block;
-}
-
-#Parameter {
-	display: inline-block;
-	max-width: 50px;
-	max-height: 50px;
-	width: 50px !important;
-}
-
-select#para1,
-select#para2,
-select#para3 {
-    max-width: 50px;
-	max-height: 50px;
-	width: 50px !important;
-}
-
-#para1 option {
-	font-size: 12px;
-	width: 150px;
-}
-
-
 .background {
-  fill: #efefef;
   pointer-events: all;
 }
 
 .map-layer {
   fill: #efefef;
-  stroke: #aaa;
+  stroke: #000;
 }
 
 .effect-layer{
@@ -134,6 +107,4 @@ text.big-text{
 .effect-layer text, text.dummy-text{
   font-size: 12px;
 }
-
-
 
