@@ -3,7 +3,7 @@
 	<meta name"description" content="Map of Hamburg">
 	<meta name"author" content="Florian Wiekhorst, Tien Huy Tonny Van">
 	<meta charset="utf-8">
-	<title>Die Stadtteile von Hamburg</title>
+	<title>Die Bezirke von Hamburg</title>
   <head>
 	<!-- Einbinden der D3-lib -->
 	<script src="https://d3js.org/d3.v3.min.js"></script>
@@ -19,10 +19,17 @@
 <h1>Die Bezirke von Hamburg</h1>
 <div id="parent">
 		<div id="wide">
+		
+		<!-- Button zur Wahl ob Bezirke oder Stadtteile -->
+				<div id="bezik_oder_stadtteil">
+					<a href="index.html" class="btn btn-default btn-lg">Stadtteile</a>
+				</div>
+		
 		<pre id="json">
 		<svg id="mappp"></svg>
 			<script type="text/javascript">
 
+			
 			//Width and height
             var w = 785;
             var h = 650;
@@ -78,7 +85,7 @@
 			<div id="narrow"> <!-- Seitenbereich mit den Angaben -->
 			
 				<!-- Überschrift mit StadtteilNamen per Script ändern -->
-					<h3 id="stadtteilname">STADTTEILNAME
+					<h3 id="stadtteilname">BezirksName
 					<script type="text/javascript">
 						$('bezirke').hover(function() {
 						var myName = $(this).attr('name');
@@ -102,7 +109,7 @@
 					</div>
 					<!-- Button div-->
 					<div id="myButt">
-					<a href="Stadtteilvergleicher.html" class="btn btn-default btn-lg">Zum Stadtteilvergleicher</a>
+					<a href="Stadtteilvergleicher.html" class="btn btn-default btn-lg btn-block">Zum Stadtteilvergleicher</a>
 				</div>
 			</div>
 		</div>

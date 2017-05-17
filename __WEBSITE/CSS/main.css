@@ -16,7 +16,6 @@ h2 {
 p {
 	text-align: center;
 	font-size: 1.2em;
-	margin-left: -150px;
 	font-weight: bold;
 }
 
@@ -30,7 +29,7 @@ svg {
 	float: left;
 	margin-left: 253px;
 	margin-top: -663px;
-	position: absolute; z-index:1;  
+	position: absolute; z-index:2;  
 	background: #FFF;
 }
 
@@ -67,8 +66,7 @@ path:hover {
 }
 
 #werte {
-	margin-right: 70px;
-	margin-left: 70px;
+	margin: auto;
 	margin-top: 70px;
 	background: #ccc;
 }
@@ -85,5 +83,11 @@ path:hover {
 	text-align: center;
 }
 
+#bezik_oder_stadtteil {
+	float: left;
+	position: absolute; z-index:5;
+	margin-top: 6px;
+	margin-left: 6px;
+}
 
 
