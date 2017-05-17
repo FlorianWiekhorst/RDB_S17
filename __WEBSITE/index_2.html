@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
   </head>
 <body>
-<h1>Die Stadtteile von Hamburg</h1>
+<h1>Die Bezirke von Hamburg</h1>
 <div id="parent">
 		<div id="wide">
 		<pre id="json">
@@ -63,7 +63,9 @@
 				   .append("path")
                    .attr("d", path)
                    .style("fill", "#70abaf")
-				   .attr("id", function(d) { return d.id; });
+				   .attr("class", "bezirke")
+				   .attr("id", function(d) { return d.id; })
+				   .attr("name", function(d) {return d.name; });
 				   
 				   
             });
@@ -74,14 +76,34 @@
 		
 		
 			<div id="narrow"> <!-- Seitenbereich mit den Angaben -->
-					<h3 id="stadtteilname">Name Stadtteil</h3>
+			
+				<!-- Überschrift mit StadtteilNamen per Script ändern -->
+					<h3 id="stadtteilname">STADTTEILNAME
+					<script type="text/javascript">
+						$('bezirke').hover(function() {
+						var myName = $(this).attr('name');
+						console.log( myName );
+						});
+					</script>
+					</h3>
 					<div id="werte">
 						<p>Einwohner</p>
 						<p>Fläche</p>
 						<p>Todesfälle</p>
 						<p>PKW</p>
+						<p>Wohnungen</p>
+						<p>Wahlbeteiligung</p>
+						<p>SPD</p>
+						<p>CDU</p>
+						<p>Grüne</p>
+						<p>Linke</p>
+						<p>FDP</p>
+						<p>AfD</p>
 					</div>
-					<a href="Stadtteilvergleicher.html" class="btn btn-default btn-lg btn-block" role="button">Zum Stadtteilvergleicher</a>
+					<!-- Button div-->
+					<div id="myButt">
+					<a href="Stadtteilvergleicher.html" class="btn btn-default btn-lg">Zum Stadtteilvergleicher</a>
+				</div>
 			</div>
 		</div>
     </body>

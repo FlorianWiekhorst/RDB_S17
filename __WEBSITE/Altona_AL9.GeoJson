@@ -3,6 +3,7 @@
   "features" : [ {
     "type" : "Feature",
     "id" : 30223,
+	"name" : "Altona",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "30223", "2618040", "62782", "51477", "0" ],
     "properties" : {
@@ -34,7 +35,8 @@
     }
   }, {
     "type" : "Feature",
-    "id" : 28936,
+    "id" : 2,
+	"name" : "Bergedorf",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "28936", "2618040", "62782", "51477", "0" ],
     "properties" : {
@@ -67,6 +69,7 @@
   }, {
     "type" : "Feature",
     "id" : 30243,
+	 "name" : "Eimsbüttel",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "30243", "2618040", "62782", "51477", "0" ],
     "properties" : {
@@ -99,6 +102,7 @@
   }, {
     "type" : "Feature",
     "id" : 28971,
+	"name" : "Hamburg-Mitte",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "28971", "2618040", "62782", "51477", "0" ],
     "properties" : {
@@ -130,6 +134,7 @@
   }, {
     "type" : "Feature",
     "id" : 30352,
+	"name" : "Hamburg-Nord",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "30352", "2618040", "62782", "51477", "0" ],
     "properties" : {
@@ -162,6 +167,7 @@
   }, {
     "type" : "Feature",
     "id" : 28964,
+	"name" : "Harburg",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "28964", "2618040", "62782", "51477", "0" ],
     "properties" : {
@@ -194,6 +200,7 @@
   }, {
     "type" : "Feature",
     "id" : 30353,
+	 "name" : "Wandsbek",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "30353", "2618040", "62782", "51477", "0" ],
     "properties" : {
