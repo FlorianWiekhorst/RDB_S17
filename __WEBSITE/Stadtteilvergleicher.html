@@ -12,55 +12,71 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <!-- optional: Einbinden der Bootstrap-JavaScript-Plugins -->
     <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link rel="stylesheet" type="text/css" href="CSS/vergleicher.css">
   </head>
 
   <body>
-  <h1 id="headerTwo">Stadtteilvergleicher</h1>
-  <a id="backButton" href="HamburgMap.html" class="btn btn-default btn-lg" role="button">Zurück zur Karte von Hamburg</a>
- 
-<h1>Welche Parameter möchten Sie vergleichen?</h1>
- <section id="Parameter">
-	<select name="para1">
-		<option value="Wahlbeteiligung">Wahlbeteiligung</option>
-		<option value="Einkommen">Einkommen</option>
-		<option value="Wohnfläche">Wohnfläche</option>
-		<option value="Geburten">Geburten</option>
-	</select> 
+	  
+	<a id="backButton" href="index.html" class="btn btn-default btn-lg" role="button">Zurück zur Karte von Hamburg</a>
+	<h1 id = "title">Stadtteilvergleicher</h1>
 	
-	<select name="para2">
-		<option value="Wahlbeteiligung">Wahlbeteiligung</option>
-		<option value="Einkommen">Einkommen</option>
-		<option value="Wohnfläche">Wohnfläche</option>
-		<option value="Geburten">Geburten</option>
-	</select> 
-	
-	<select name="para3">
-		<option value="Wahlbeteiligung">Wahlbeteiligung</option>
-		<option value="Einkommen">Einkommen</option>
-		<option value="Wohnfläche">Wohnfläche</option>
-		<option value="Geburten">Geburten</option>
-	</select> 
-	
- </section>
-	<section>	   
-			<div id="parent">
-				<div id="wideVergleicher"> <!-- Hauptfläche der Balkendiagramme -->
+	<div id = "main">
+		<div id = "top">
+			<h1>Welche Parameter möchten Sie vergleichen?</h1>
+			<section id="Parameter">
+				<select name="para1">
+					<option value="Wahlbeteiligung">Wahlbeteiligung</option>
+					<option value="Einkommen">Einkommen</option>
+					<option value="Wohnfläche">Wohnfläche</option>
+					<option value="Geburten">Geburten</option>
+				</select> 
 				
-				</div>
+				<select name="para2">
+					<option value="Wahlbeteiligung">Wahlbeteiligung</option>
+					<option value="Einkommen">Einkommen</option>
+					<option value="Wohnfläche">Wohnfläche</option>
+					<option value="Geburten">Geburten</option>
+				</select> 
 				
+				<select name="para3">
+					<option value="Wahlbeteiligung">Wahlbeteiligung</option>
+					<option value="Einkommen">Einkommen</option>
+					<option value="Wohnfläche">Wohnfläche</option>
+					<option value="Geburten">Geburten</option>
+				</select> 
+			 </section>
+		 </div>
+		 
+		 <div id = "bottom">
+				   	
 				
-				<div id="narrowVergleicher"> <!-- Seitenbereich mit den Auswahlmöglichkeiten -->
+					<h1 id = "stadtteile"> Von welchen Stadtteilen?</h1>
+					
 					<select>
 						<option value="Niendorf">Niendorf</option>
 						<option value="Wandsbek">Wandsbek</option>
 						<option value="Hamm">Hamm</option>
 						<option value="Lokstedt">Lokstedt</option>
 					</select> 
-				</div>
-			</div>
-	</section>
-	
+					<select>
+						<option value="Niendorf">Niendorf</option>
+						<option value="Wandsbek">Wandsbek</option>
+						<option value="Hamm">Hamm</option>
+						<option value="Lokstedt">Lokstedt</option>
+					</select>
+					<select>
+						<option value="Niendorf">Niendorf</option>
+						<option value="Wandsbek">Wandsbek</option>
+						<option value="Hamm">Hamm</option>
+						<option value="Lokstedt">Lokstedt</option>
+					</select>
+					
+					<a href = "balkendiagramm"> <img src = "http://dsd.zum.de/images/6/6f/Balkendiagramm1.jpg" alt= "bild" /> </a>
+			
+		</div>
+	</div>
   </body>
-  <p><h2>Tien Huy Tonny Van & Florian Wiekhorst</h2></p>
+  <div id = "footer">
+	<p><h2>Tien Huy Tonny Van & Florian Wiekhorst</h2></p>
+  </div>
 </html>
