@@ -85,22 +85,19 @@
 			<div id="narrow"> <!-- Seitenbereich mit den Angaben -->
 			
 				<!-- Überschrift mit StadtteilNamen per Script ändern -->
-					<h3 id="stadtteilname"></h3>
-					<script type="text/javascript">
-						var bezirk = document.getElementByClass('bezirke');
-						var ausgabe = document.getElementById('stadtteilname');
-						
-							elem.addEventListener('mouseover', mouseOver);
-							elem.addEventListener('mouseout', mouseOut);
+					<h3 id="stadtteilname">&nbsp;</h3>
+						<script type="text/javascript">
+						$(document).ready(function(){
+							$("#1,#2,#3,#4,#5,#6,#7").on("mouseenter",function() {
+								let myName = $(this).attr('name');
+								$("#stadtteilname").text(myName);
+							});
+								$(".areas").on("mouseleave",function(){
+								$("#stadtteilname").text("\xA0");
+							});
+						});
+						</script>
 
-							function mouseOver() {
-								ausgabe.innerHTML = 'Ich bin dynamisch!';
-							}
-
-							function mouseOut() {
-								ausgabe.innerHTML = ' ';
-							}
-					</script>
 					<div id="werte">
 						<p>Einwohner</p>
 						<p>Fläche</p>
@@ -121,5 +118,5 @@
 				</div>
 			</div>
 		</div>
-    </body>
+	</body>
 </html>
