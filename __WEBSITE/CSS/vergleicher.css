@@ -1,0 +1,102 @@
+/* Our Css collection */
+h1 {
+    display: block;
+	font-size: 3.3em;
+	margin-top: 1.2em;
+	margin-bottom: 0.7em;
+	text-align: center;
+	font-weight: bold;
+	white-space: nowrap;
+} 
+
+h2 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	font-size: 1em;
+}
+
+body {
+	background: #92bda3;
+	
+}
+
+main{
+	
+}
+
+#title{
+	text-decoration:underline;
+	margin-bottom: 100px;
+}
+
+#top{
+	text-align:center;
+	float: center;
+	margin:auto;
+	border-style: solid;
+	
+}
+
+#bottom {
+	
+	text-align:left;
+	display: inline-block;
+	max-width: 50px;
+	max-height: 50px;
+	width: 50px !important;
+	margin-left:20px;
+}
+
+#left {
+	text-align:left;
+	display: inline-block;
+	max-width: 50px;
+	max-height: 50px;
+	width: 50px !important;
+
+}
+
+img{
+	float:right;
+	margin:-100px -1200px;
+}
+
+#stadtteile{
+	text-align:left;
+}
+
+#backButton {
+	float: top;
+}
+
+#header {
+	margin: left;
+}
+
+#Parameter {
+	
+}
+
+select#para1,
+select#para2,
+select#para3 {
+    max-width: 50px;
+	max-height: 50px;
+	width: 50px !important;
+}
+
+#para1 option {
+	font-size: 12px;
+	width: 150px;
+}
+
+#footer{
+	position:absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: yellow;
+    
+}
