@@ -19,7 +19,7 @@ p {
 }
 
 body {
-	background: #92bda3;
+	background: #444444;
 	
 }
 
@@ -31,6 +31,7 @@ img{
 	
 }
 #title{
+	color:white;
 	text-decoration:underline;
 	margin-bottom: 80px;
 }
@@ -40,7 +41,7 @@ img{
 	float: center;
 	margin:auto;
 	border-style: solid;
-	
+	background-color:grey;
 }
 
 #bottom {
@@ -51,14 +52,14 @@ img{
 
 #left {
 	width:20%;
-	background-color:blue;
+	background-color:grey;
 	display: inline-block;
 	max-width: 20%;
 	border-style:solid;
 }
 #right{
 	flex:1;
-	background-color:red;
+	background-color:grey;
 	border-style:solid;
 }
 
@@ -67,27 +68,36 @@ img{
 	margin-top:5%;
 	margin-bottom: 2%;
 	margin-left:5%;
+	color:blue;
+}
+
+#param{
+	color:blue;
 }
 
 #backButton {
 	float: top;
 }
 
-
 #Parameter {
 	font-size:60px;
+	color: red;
+	
 }
 
 #Parameter2 {
 	font-size: 60px;
 	margin-bottom: 8%;
 	margin-left:5%;
+	color:red;
+	background-color:grey;
 }
 
 #footer{
 	position:absolute;
     bottom: 0;
     width: 100%;
-    background-color: yellow;
-    height:7%;
+    background-color: #444444;
+    height:8.2%;
+	color:white;
 }
