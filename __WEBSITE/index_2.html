@@ -73,31 +73,27 @@
 				   .attr("class", "bezirke")
 				   .attr("id", function(d) { return d.id; })
 				   .attr("name", function(d) {return d.name; });
-				   
+				   .attr("einwohner", function(d) {return d.einwohner; });
+				   .attr("flache", function(d) {return d.flache; });
+				   .attr("todes", function(d) {return d.todes; });
+				   .attr("pkw", function(d) {return d.pkw; });
+				   .attr("wohn", function(d) {return d.wohn; });
+				   .attr("wahl", function(d) {return d.wahl; });
+				   .attr("spd", function(d) {return d.spd; });
+				   .attr("cdu", function(d) {return d.cdu; });
+				   .attr("grune", function(d) {return d.grune; });
+				   .attr("linke", function(d) {return d.linke; });
+				   .attr("fdp", function(d) {return d.fdp; });
+				   .attr("afd", function(d) {return d.afd; });
 				   
             });
         </script>
-			
-			</pre>
-			</div>   
-		
-		
+	
+		</pre>
+		</div>   
 			<div id="narrow"> <!-- Seitenbereich mit den Angaben -->
-			
 				<!-- Überschrift mit StadtteilNamen per Script ändern -->
 					<h3 id="stadtteilname">&nbsp;</h3>
-						<script type="text/javascript">
-						$(document).ready(function(){
-							$("#1,#2,#3,#4,#5,#6,#7").on("mouseenter",function() {
-								let myName = $(this).attr('name');
-								$("#stadtteilname").text(myName);
-							});
-								$(".areas").on("mouseleave",function(){
-								$("#stadtteilname").text("\xA0");
-							});
-						});
-						</script>
-
 					<div id="werte">
 						<p>Einwohner</p>
 						<p>Fläche</p>
@@ -118,5 +114,17 @@
 				</div>
 			</div>
 		</div>
+			<script type="text/javascript">
+						$(document).ready(function(){
+							$("#1,#2,#3,#4,#5,#6,#7").on("mouseenter",function() {
+								let myName = $(this).attr('name');
+								$("#stadtteilname").text(myName);
+							});
+							
+							$(".areas").on("mouseleave",function(){
+								$("#stadtteilname").text("\xA0");
+							});
+						});
+			</script>
 	</body>
 </html>
