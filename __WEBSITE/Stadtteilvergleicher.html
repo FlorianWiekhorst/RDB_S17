@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
-	<meta name"description" content="CompareAreasOfHamburg">
-	<meta name"author" content="Florian Wiekhorst, Tien Huy Tonny Van">
+
+  <head>
 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name"description" content="Compare Areas of Hamburg">
+	<meta name"author" content="Florian Wiekhorst, Tien Huy Tonny Van">
+	
 	<title>Stadtteilvergleicher</title>
 	
-  <head>
+  
     <!-- Einbinden des Bootstrap-Stylesheets -->
     <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- optional: Einbinden der jQuery-Bibliothek -->
@@ -17,12 +23,12 @@
 
   <body>
 	  
-	<a id="backButton" href="index.html" class="btn btn-default btn-lg" role="button">Zurück zur Karte von Hamburg</a>
+	<a id="backButton" href="Stadtteile.html" class="btn btn-default btn-lg" role="button">Zurück zur Karte von Hamburg</a>
 	<h1 id = "title">Stadtteilvergleicher</h1>
 	
 	<div id = "main">
 		<div id = "top">
-			<h1 id="header">Welche Parameter möchten Sie vergleichen?</h1>
+			<h1>Welche Parameter möchten Sie vergleichen?</h1>
 			<section id="Parameter">
 				<select name="para1">
 					<option value="Wahlbeteiligung">Wahlbeteiligung</option>
@@ -33,7 +39,7 @@
 				
 				<select name="para2">
 					<option value="Wahlbeteiligung">Wahlbeteiligung</option>
-					<option value="Einkommen" selected="selected">Einkommen</option>
+					<option value="Einkommen">Einkommen</option>
 					<option value="Wohnfläche">Wohnfläche</option>
 					<option value="Geburten">Geburten</option>
 				</select> 
@@ -41,7 +47,7 @@
 				<select name="para3">
 					<option value="Wahlbeteiligung">Wahlbeteiligung</option>
 					<option value="Einkommen">Einkommen</option>
-					<option value="Wohnfläche" selected="selected">Wohnfläche</option>
+					<option value="Wohnfläche">Wohnfläche</option>
 					<option value="Geburten">Geburten</option>
 				</select> 
 			 </section>
@@ -54,14 +60,14 @@
 					<section id ="Parameter2">
 						<select>
 							<option value="Niendorf">Niendorf</option>
-							<option value="Wandsbek" selected="selected">Wandsbek</option>
+							<option value="Wandsbek">Wandsbek</option>
 							<option value="Hamm">Hamm</option>
 							<option value="Lokstedt">Lokstedt</option>
 						</select> 
 						<select>
 							<option value="Niendorf">Niendorf</option>
 							<option value="Wandsbek">Wandsbek</option>
-							<option value="Hamm" selected="selected">Hamm</option>
+							<option value="Hamm">Hamm</option>
 							<option value="Lokstedt">Lokstedt</option>
 						</select>
 						<select>
@@ -73,7 +79,7 @@
 					</section>
 				</div>
 				<div id= "right">
-					<img src = "https://raw.githubusercontent.com/FlorianWiekhorst/RDB_S17/43a38e4ff7a644a6d6c330d726633a28b61cb89d/GIMP_Dateien/MockupDiagramm.png" alt="bild"/>
+					<a href = "balkendiagramm"> <img src = "http://dsd.zum.de/images/6/6f/Balkendiagramm1.jpg" alt= "bild" /> </a>
 				</div>
 		</div>
 	</div>
