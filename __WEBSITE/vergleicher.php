@@ -1,3 +1,8 @@
+<?php
+	require 'inc/db.php'; // auslagern des Datenbankzugriffs
+?>
+
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -11,7 +16,25 @@
 	
 	<title>Stadtteilvergleicher</title>
 	
-  
+  <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- giev bootstrap icons -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+	<link href="cover.css" rel="stylesheet">
+	
+	 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->    
+	
+	<!-- Einbinden der D3-lib -->
+	<script src="https://d3js.org/d3.v3.min.js"></script>
     <!-- Einbinden des Bootstrap-Stylesheets -->
     <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- optional: Einbinden der jQuery-Bibliothek -->
@@ -22,9 +45,9 @@
   </head>
 
   <body>
-	  
-	<a id="backButton" href="Stadtteile.html" class="btn btn-default btn-lg" role="button">Zurück zur Karte von Hamburg</a>
-	<h1 id = "title">Stadtteilvergleicher</h1>
+	<h1>Stadtteilvergleicher</h1>
+	<a id="backButton" href="stadtteile.php" class="btn btn-default btn-lg" role="button">Zurück zur Karte von Hamburg</a>
+
 	
 	<div id = "main">
 		<div id = "top">

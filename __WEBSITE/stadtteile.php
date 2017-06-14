@@ -1,3 +1,8 @@
+<?php
+	require 'inc/db.php'; // auslagern des Datenbankzugriffs
+?>
+
+
 <!DOCTYPE html>
 <html lang="de">
 	
@@ -45,7 +50,7 @@
 		
 		<!-- Button zur Wahl ob Bezirke oder Stadtteile -->
 			<div id="bezik_oder_stadtteil">
-					<a href="Bezirke.html" class="btn btn-default btn-lg">Bezirke</a>
+					<a href="bezirke.php" class="btn btn-default btn-lg">Bezirke</a>
 			</div>
 		
 		<!-- Test paste -->
@@ -126,7 +131,7 @@
 						<p>FDP</p>
 						<p>AfD</p>
 					</div>
-					<a href="Stadtteilvergleicher.html" class="btn btn-default btn-lg btn-block" role="button">Zum Stadtteilvergleicher</a>
+					<a href="vergleicher.php" class="btn btn-default btn-lg btn-block" role="button">Zum Stadtteilvergleicher</a>
 			</div>
 		</div>
     </body>
