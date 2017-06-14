@@ -1,5 +1,20 @@
 <?php
-	require 'inc/db.php'; // auslagern des Datenbankzugriffs
+# Zugangsdaten
+$db_server = 'rdbms.strato.de';
+$db_benutzer = 'U2988731';
+$db_passwort = 'aaleEssen1Huhn';
+$db_name = 'DB2988731';
+
+# Verbindungsaufbau
+// Create connection
+$conn = new mysqli($db_server, $db_benutzer, $db_passwort, $db_name);
+
+// Check connection
+if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+}
+// Change character set to utf8
+mysqli_set_charset($conn,"utf8");
 ?>
 
 
@@ -111,6 +126,7 @@
 						<!-- Überschrift mit StadtteilNamen per Script ändern -->
 						<h3 id="stadtteilname">&nbsp;</h3>
 						<h3 id="testme">&nbsp;</h3>
+		
 						<script type="text/javascript">
 						$(document).ready(function(){
 							$("#1,#2,#3,#4,#5,#6,#7").on("mouseenter",function() {
@@ -124,12 +140,31 @@
 								$("#stadtteilname").text("\xA0");
 								$("#testme").text("\xA0");
 							});
-							
-							
-							
 						});
-						</script>
-									
+							
+						</script>	
+							
+						<?php						
+						// SQL query 
+						$sql = "SELECT id, Stadtteilname FROM Hamburg";
+
+						// Query string of the database is transmitted via the connection and its result is saved under the variable $result 
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+						// only if the $results is an associative array, which means if it contains keys as column names (e.g. id)
+						// output data of each row named (e.g., $row["id"])
+						while($row = $result->fetch_assoc()) {
+							echo "id: " . $row["id"]. " - Name: " . $row["Stadtteilname"]. "<br>";
+							}
+						} else {
+							echo "0 results"; 
+						}
+						?>
+					
+					
+
+					<!--
 						<p>Einwohner</p>
 						<p>Fläche</p>
 						<p>Todesfälle</p>
@@ -141,9 +176,11 @@
 						<p>Grüne</p>
 						<p>Linke</p>
 						<p>FDP</p>
-						<p>AfD</p>
-					</div>
-					<a href="vergleicher.php" class="btn btn-default btn-lg btn-block">Zum Stadtteilvergleicher</a>
+						<p>AfD</p> 
+					-->
+				
+				</div>
+				<a href="vergleicher.php" class="btn btn-default btn-lg btn-block">Zum Stadtteilvergleicher</a>
 			</div>
 		</div>
 	</body>

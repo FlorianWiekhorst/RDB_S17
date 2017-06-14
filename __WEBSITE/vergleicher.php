@@ -1,5 +1,5 @@
 <?php
-	require 'inc/db.php'; // auslagern des Datenbankzugriffs
+	/* require 'inc/db.php'; // auslagern des Datenbankzugriffs */
 ?>
 
 
