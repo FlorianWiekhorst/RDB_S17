@@ -48,7 +48,7 @@
 		<div id="wide" class="col-sm-8">
 		<!-- Button zur Wahl ob Bezirke oder Stadtteile -->
 				<div id="bezik_oder_stadtteil">
-					<a href="stadtteile.php" class="btn btn-default btn-lg">Stadtteile</a>
+					<a href="stadtteile.php" class="btn btn-default btn-lg">Zu den Stadtteile</a>
 				</div>
 
 			<script type="text/javascript">
@@ -71,7 +71,8 @@
                         .append("svg")
                         .attr("width", w)
                         .attr("height", h)
-						.attr("class", "areas");
+						.attr("class", "areas")
+						.attr("id", "karte");
 
 
             //Load in GeoJSON data
