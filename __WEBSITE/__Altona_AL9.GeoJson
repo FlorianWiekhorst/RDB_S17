@@ -2,12 +2,12 @@
   "type" : "FeatureCollection",
   "features" : [ {
     "type" : "Feature",
-    "id" : 1,
+    "id" : 101,
 	"name" : "Altona(Bezirk)",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "30223", "2618040", "62782", "51477", "0" ],
     "properties" : {
-      "id" : 1,
+      "id" : 101,
       "name" : "Altona(Bezirk)",
       "localname" : "Altona(Bezirk)",
       "timestamp" : "2017-05-14 22:01:26+02",
@@ -35,12 +35,12 @@
     }
   }, {
     "type" : "Feature",
-    "id" : 2,
+    "id" : 105,
 	"name" : "Bergedorf(Bezirk)",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "28936", "2618040", "62782", "51477", "0" ],
     "properties" : {
-      "id" : 2,
+      "id" : 105,
       "name" : "Bergedorf(Bezirk)",
       "localname" : "Bergedorf(Bezirk)",
       "timestamp" : "2017-05-14 22:01:26+02",
@@ -68,12 +68,12 @@
     }
   }, {
     "type" : "Feature",
-    "id" : 3,
+    "id" : 102,
 	 "name" : "Eimsbüttel(Bezirk)",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "30243", "2618040", "62782", "51477", "0" ],
     "properties" : {
-      "id" : 3,
+      "id" : 102,
       "name" : "Eimsbüttel(Bezirk)",
       "localname" : "Eimsbüttel(Bezirk)",
       "timestamp" : "2017-05-14 22:01:26+02",
@@ -101,12 +101,12 @@
     }
   }, {
     "type" : "Feature",
-    "id" : 4,
+    "id" : 100,
 	"name" : "Hamburg-Mitte(Bezirk)",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "28971", "2618040", "62782", "51477", "0" ],
     "properties" : {
-      "id" : 4,
+      "id" : 100,
       "name" : "Hamburg-Mitte(Bezirk)",
       "localname" : "Hamburg-Mitte(Bezirk)",
       "timestamp" : "2017-05-14 22:01:26+02",
@@ -133,12 +133,12 @@
     }
   }, {
     "type" : "Feature",
-    "id" : 5,
+    "id" : 103,
 	"name" : "Hamburg-Nord(Bezirk)",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "30352", "2618040", "62782", "51477", "0" ],
     "properties" : {
-      "id" : 5,
+      "id" : 103,
       "name" : "Hamburg-Nord(Bezirk)",
       "localname" : "Hamburg-Nord(Bezirk)",
       "timestamp" : "2017-05-14 22:01:26+02",
@@ -166,12 +166,12 @@
     }
   }, {
     "type" : "Feature",
-    "id" : 6,
+    "id" : 106,
 	"name" : "Harburg(Bezirk)",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "28964", "2618040", "62782", "51477", "0" ],
     "properties" : {
-      "id" : 6,
+      "id" : 106,
       "name" : "Harburg(Bezirk)",
       "localname" : "Harburg(Bezirk)",
       "timestamp" : "2017-05-14 22:01:26+02",
@@ -199,12 +199,12 @@
     }
   }, {
     "type" : "Feature",
-    "id" : 7,
+    "id" : 104,
 	"name" : "Wandsbek(Bezirk)",
     "timestamp" : "2017-05-14 22:01:26+02",
     "rpath" : [ "30353", "2618040", "62782", "51477", "0" ],
     "properties" : {
-      "id" : 7,
+      "id" : 104,
       "name" : "Wandsbek(Bezirk)",
       "localname" : "Wandsbek(Bezirk)",
       "timestamp" : "2017-05-14 22:01:26+02",
