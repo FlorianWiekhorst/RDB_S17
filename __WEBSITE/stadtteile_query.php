@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 // Change character set to utf8
 mysqli_set_charset($conn,"utf8");
 
-$sql = "SELECT id,Stadtteilname,Bevölkerung,Anteil_der_unter_18Jährigen_in_,Anteil_der_65Jährigen_und_Älteren_in_,Ausländeranteil_in_,Haushalte,Einpersonenhaushalte,Haushalte_mit_Kindern,Bevölkerungsdichte,Geburten,Sterbefälle,Arbeitslose,Durchschnittliches_Einkommen_in_EUR,Wohnungen FROM Hamburg WHERE id BETWEEN 100 AND 106";
+$sql = "SELECT id,Stadtteilname,Bevölkerung,Anteil_der_unter_18Jährigen_in_,Anteil_der_65Jährigen_und_Älteren_in_,Ausländeranteil_in_,Haushalte,Einpersonenhaushalte,Haushalte_mit_Kindern,Bevölkerungsdichte,Geburten,Sterbefälle,Arbeitslose,Durchschnittliches_Einkommen_in_EUR,Wohnungen FROM Hamburg";
 $result = $conn->query($sql);
 $data = array();
 

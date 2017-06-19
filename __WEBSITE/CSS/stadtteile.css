@@ -2,8 +2,8 @@
 h1 {
     display: block;
 	font-size: 4em;
-	margin-top: 1.2em;
-	margin-bottom: 0.7em;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
 	text-align: center;
 	font-weight: bold;
 	color: white;
@@ -19,7 +19,11 @@ p {
 	font-weight: bold;
 }
 
-
+#karte {
+	z-index: -10;
+	margin-top: 10%;
+	margin-right: -21%;
+}
 
 path {
     stroke: #333;
@@ -30,20 +34,29 @@ path {
 path:hover {
 	opacity: 1;
 	stroke:black;
+	fill: #cc3232;
 }
 
 #werte {
-	margin: auto;
-	margin: 10px;
-	background: #cec;
+	margin-right: 4em;
+	background: #30595b;
 }
 
 #stadtteilname {
 	text-align: center;
 	margin-top: 60px;
-	font-size: 2.8em;
+	font-size: 3em;
 	font-weight: bold;
-	color: black;
+	color: white;
+}
+
+#population,#prozentKids,#rentnerProzent,
+#ausländerProzent,#haushalte,#einpersonenhaushalte,
+#haushalteKids,#bevölkerungsdichte,#geburten,
+#sterben.#arbeitslose,#durchschnittseinkommen,#wohnungen {
+	text-align: center;
+	font-size: 2.0em;
+	color: white;
 }
 
 #bezik_oder_stadtteil {
@@ -51,6 +64,13 @@ path:hover {
 	position: absolute; z-index:5;
 	margin-top: 6px;
 	margin-left: 180px;
+}
+
+#vergleicherButton {
+	float: bottom;
+	position: relative; z-index:8;
+	margin-bottom: -70px;
+	padding-top: 30px;
 }
 
 /*
@@ -71,7 +91,7 @@ a:hover {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
 }
 
 
@@ -88,7 +108,7 @@ body {
   background-size: cover;
   
   height: 100%;
-  background-color: #284d4f;
+  background-color: #30595b;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);

@@ -1,8 +1,3 @@
-<?php
-	/* require 'inc/db.php'; // auslagern des Datenbankzugriffs */
-?>
-
-
 <!DOCTYPE html>
 <html lang="de">
 
@@ -16,10 +11,15 @@
 	
 	<title>Stadtteilvergleicher</title>
 	
-  <!-- Bootstrap core CSS -->
+	<!-- 
+			# This lovelly d3-art was found under http://bl.ocks.org/erikvullings/51cc5332439939f1f292 
+			  It was originally uploaded by 'Erik Vullings' on August, 29, 2015
+
+			# we've edited his version for our projekt a little
+	-->
+	
+	<!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-	<!-- giev bootstrap icons -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -34,7 +34,7 @@
     <![endif]-->    
 	
 	<!-- Einbinden der D3-lib -->
-	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
     <!-- Einbinden des Bootstrap-Stylesheets -->
     <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- optional: Einbinden der jQuery-Bibliothek -->
@@ -45,69 +45,41 @@
   </head>
 
   <body>
-	<h1>Stadtteilvergleicher</h1>
-	<a id="backButton" href="stadtteile.php" class="btn btn-default btn-lg" role="button">Zurück zur Karte von Hamburg</a>
+  <div id = "main">
 
+		<a href="stadtteile.php"  id="backButton"  class="btn btn-default btn-lg">Zur Karte von Hamburg</a>
 	
-	<div id = "main">
 		<div id = "top">
+			<h1>Stadtteilvergleicher</h1>
 			<h1>Welche Parameter möchten Sie vergleichen?</h1>
-			<section id="Parameter">
-				<select name="para1">
-					<option value="Wahlbeteiligung">Wahlbeteiligung</option>
-					<option value="Einkommen">Einkommen</option>
-					<option value="Wohnfläche">Wohnfläche</option>
-					<option value="Geburten">Geburten</option>
-				</select> 
-				
-				<select name="para2">
-					<option value="Wahlbeteiligung">Wahlbeteiligung</option>
-					<option value="Einkommen">Einkommen</option>
-					<option value="Wohnfläche">Wohnfläche</option>
-					<option value="Geburten">Geburten</option>
-				</select> 
-				
-				<select name="para3">
-					<option value="Wahlbeteiligung">Wahlbeteiligung</option>
-					<option value="Einkommen">Einkommen</option>
-					<option value="Wohnfläche">Wohnfläche</option>
-					<option value="Geburten">Geburten</option>
-				</select> 
-			 </section>
+				<section id="Parameter" class="row">
+						<div class="col-xs-3">&nbsp;</div> <!-- Ghost-Div to make space -->
+						<div id="para1" class="col-xs-3"></div>	<!-- Creating Select boxes with JavaScript	-->
+						<div id="para2" class="col-xs-3"></div>
+						<div id="para3" class="col-xs-3"></div>
+				 </section>
 		 </div>
 		 
-		 <div id = "bottom">
-				   	
-				<div id = "left">
+		 <div id = "bottom">   	
+				<div id = "left">	<!-- div 'left' for Stadtteile-Select Boxes	-->
 					<h1 id = "stadtteile"> Von welchen Stadtteilen?</h1>
 					<section id ="Parameter2">
-						<select>
-							<option value="Niendorf">Niendorf</option>
-							<option value="Wandsbek">Wandsbek</option>
-							<option value="Hamm">Hamm</option>
-							<option value="Lokstedt">Lokstedt</option>
-						</select> 
-						<select>
-							<option value="Niendorf">Niendorf</option>
-							<option value="Wandsbek">Wandsbek</option>
-							<option value="Hamm">Hamm</option>
-							<option value="Lokstedt">Lokstedt</option>
-						</select>
-						<select>
-							<option value="Niendorf">Niendorf</option>
-							<option value="Wandsbek">Wandsbek</option>
-							<option value="Hamm">Hamm</option>
-							<option value="Lokstedt">Lokstedt</option>
-						</select>
+						<div id="area1"></div>
+						<div id="area2"></div>
+						<div id="area3"></div>
 					</section>
 				</div>
-				<div id= "right">
-					<a href = "balkendiagramm"> <img src = "http://dsd.zum.de/images/6/6f/Balkendiagramm1.jpg" alt= "bild" /> </a>
+				
+				<div id= "right">	<!-- div 'right' for d3-graphics	-->
+					<svg class="chart"></svg>
 				</div>
+			</div>
+			<!-- Button zum berechnen des Inputs in die 6 Select Boxes -->
+			<a id="berechne"  class="btn btn-default btn-lg">Werte Vergleichen!</a>
 		</div>
-	</div>
+	<footer>Tien Huy Tonny Van & Florian Wiekhorst</footer>
+	
+		<!-- Einbinden der JavaScript-datei -->
+		<script src="vergleicher.js"></script>
   </body>
-  <div id = "footer">
-	<p><h2>Tien Huy Tonny Van & Florian Wiekhorst</h2></p>
-  </div>
 </html>

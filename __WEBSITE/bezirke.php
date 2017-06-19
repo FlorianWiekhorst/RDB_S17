@@ -15,7 +15,7 @@
 	<!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 	<!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- giev bootstrap icons -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -39,18 +39,19 @@
 
     <!-- optional: Einbinden der Bootstrap-JavaScript-Plugins -->
     <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link rel="stylesheet" type="text/css" href="CSS/bezirke.css">
   </head>
 
 <body>
 <h1>Die Bezirke von Hamburg</h1>
 <div id="parent">
-		<div id="wide" class="col-sm-8">
+		<div id="wide" class="col-sm-7">
 		<!-- Button zur Wahl ob Bezirke oder Stadtteile -->
 				<div id="bezik_oder_stadtteil">
-					<a href="stadtteile.php" class="btn btn-default btn-lg">Zu den Stadtteile</a>
+					<a href="stadtteile.php" class="btn btn-default btn-lg">Zu den Stadtteilen</a>
 				</div>
-
+			
+		<div id="karte"></div>
 			<script type="text/javascript">
 			//Width and height
             var w = 650;
@@ -67,12 +68,12 @@
 
             //Create SVG element
 
-			var svg = d3.select("body")
+			var svg = d3.select("#karte")
                         .append("svg")
                         .attr("width", w)
                         .attr("height", h)
 						.attr("class", "areas")
-						.attr("id", "karte");
+						
 
 
             //Load in GeoJSON data
@@ -102,16 +103,30 @@
         </script>
 			</div>
 
-			<div id="narrow" class="col-sm-4"> <!-- Seitenbereich mit den Angaben -->
+			<div id="narrow" class="col-sm-5"> <!-- Seitenbereich mit den Angaben -->
 
 					<div id="werte">
-						<!-- Überschrift mit StadtteilNamen per Script ändern -->
+						<!-- Überschrift und Werte per Script ändern 
+							 Alle Werteberiche mit leerem Space auffüllen.
+						-->
 						<h3 id="stadtteilname">&nbsp;</h3>
-						<h3 id="testme">&nbsp;</h3>
-
+						<h3 id="population">&nbsp;</h3>
+						<h3 id="prozentKids">&nbsp;</h3>
+						<h3 id="rentnerProzent">&nbsp;</h3>				
+						<h3 id="ausländerProzent">&nbsp;</h3>
+						<h3 id="haushalte">&nbsp;</h3>
+						<h3 id="einpersonenhaushalte">&nbsp;</h3>
+						<h3 id="haushalteKids">&nbsp;</h3>
+						<h3 id="bevölkerungsdichte">&nbsp;</h3>	
+						<h3 id="geburten">&nbsp;</h3>
+						<h3 id="sterben">&nbsp;</h3>
+						<h3 id="arbeitslose">&nbsp;</h3>
+						<h3 id="durchschnittseinkommen">&nbsp;</h3>
+						<h3 id="wohnungen">&nbsp;</h3>		
+						
 				</div>
-				<a href="vergleicher.php" class="btn btn-default btn-lg btn-block">Zum Stadtteilvergleicher</a>
 			</div>
+				<a id="vergleicherButton" href="vergleicher.php" class="btn btn-default btn-lg">Zum Stadtteilvergleicher</a>
 		</div>
 
 		<!-- Einbinden der code.js -->
