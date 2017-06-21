@@ -44,6 +44,7 @@
 
 <body>
 <h1>Die Bezirke von Hamburg</h1>
+<p>Statistische Daten für das Jahr 2014 zu den Stadtteilen Hamburgs, © Statistikamt Nord</p>
 <div id="parent">
 		<div id="wide" class="col-sm-7">
 		<!-- Button zur Wahl ob Bezirke oder Stadtteile -->
@@ -54,8 +55,8 @@
 		<div id="karte"></div>
 			<script type="text/javascript">
 			//Width and height
-            var w = 650;
-            var h = 500;
+            var w = 666;
+            var h = 666;
 
             //Define map projection
             var projection = d3.geo.mercator()

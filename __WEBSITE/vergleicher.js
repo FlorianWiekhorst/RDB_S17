@@ -241,7 +241,7 @@ function setGraph(district1,district2,district3,para1,val1,val2,val3,para2,val4,
 					var color = d3.scale.category20();
 					var chartHeight = barHeight * zippedData.length + gapBetweenGroups * data.labels.length;
 
-					var x = d3.scale.linear().domain([0, d3.max(zippedData)]).range([0, chartWidth]);
+					var x = d3.scale.linear().domain([0, 50000]).range([0, chartWidth]);
 
 					console.log(x(100));	
 
@@ -320,7 +320,7 @@ function setGraph(district1,district2,district3,para1,val1,val2,val3,para2,val4,
 						.attr('transform', function (d, i) {
 							var height = legendRectSize + legendSpacing;
 							var offset = -gapBetweenGroups/2;
-							var horz = spaceForLabels + chartWidth + 100 - legendRectSize;
+							var horz = spaceForLabels + chartWidth - legendRectSize;
 							var vert = i * height - offset;
 							return 'translate(' + horz + ',' + vert + ')';
 						});
