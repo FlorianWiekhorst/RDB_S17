@@ -47,7 +47,7 @@ function selectItems() {
 	// Create Select Boxes Parameter-Array
 	// Parameter 1 Select Box
 	var myDiv4 = document.getElementById("para1");
-	var parameter1 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in EUR","Wohnungen"];
+	var parameter1 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in €","Wohnungen"];
     var selectList4 = document.createElement("select");
     selectList4.setAttribute("id", "parameter1");
     for (var j = 0; j < parameter1.length; j++) {
@@ -60,7 +60,7 @@ function selectItems() {
 	
 	// Parameter 2 Select Box
 	var myDiv5 = document.getElementById("para2");
-	var parameter2 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in EUR","Wohnungen"];
+	var parameter2 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in €","Wohnungen"];
     var selectList5 = document.createElement("select");
     selectList5.setAttribute("id", "parameter2");
     for (var j = 0; j < parameter2.length; j++) {
@@ -73,7 +73,7 @@ function selectItems() {
 	
 	// Parameter 3 Select Box
 	var myDiv6 = document.getElementById("para3");
-	var parameter3 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in EUR","Wohnungen"];
+	var parameter3 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in €","Wohnungen"];
     var selectList6 = document.createElement("select");
     selectList6.setAttribute("id", "parameter3");
     for (var j = 0; j < parameter3.length; j++) {
@@ -113,49 +113,6 @@ $(document).ready(function(){
 			case "Rentner in %":
 				para_1 = "Anteil_der_65Jährigen_und_Älteren_in_";
 				break;
-			case "Ausländer in %":
-				para_1 = "Anteil_der_Bevölkerung_mit_Migrationshintergrund_in_";
-				break;
-			case "Haushalte mit Kindern":
-				para_1 = "Haushalte_mit_Kindern";
-				break;
-			case "Durchs. Einkommen in EUR":
-				para_1 = "Durchschnittliches_Einkommen_in_EUR";
-				break;
-		}
-		switch(para_2){
-			case "Kinder in %":
-				para_2 = "Anteil_der_unter_18Jährigen_in_";
-				break;
-			case "Rentner in %":
-				para_2 = "Anteil_der_65Jährigen_und_Älteren_in_";
-				break;
-			case "Ausländer in %":
-				para_2 = "Anteil_der_Bevölkerung_mit_Migrationshintergrund_in_";
-				break;
-			case "Haushalte mit Kindern":
-				para_2 = "Haushalte_mit_Kindern";
-				break;
-			case "Durchs. Einkommen in EUR":
-				para_2 = "Durchschnittliches_Einkommen_in_EUR";
-				break;	
-		}
-		switch(para_3){
-			case "Kinder in %":
-				para_3 = "Anteil_der_unter_18Jährigen_in_";
-				break;
-			case "Rentner in %":
-				para_3 = "Anteil_der_65Jährigen_und_Älteren_in_";
-				break;
-			case "Ausländer in %":
-				para_3 = "Anteil_der_Bevölkerung_mit_Migrationshintergrund_in_";
-				break;
-			case "Haushalte mit Kindern":
-				para_3 = "Haushalte_mit_Kindern";
-				break;
-			case "Durchs. Einkommen in EUR":
-				para_3 = "Durchschnittliches_Einkommen_in_EUR";
-				break;
 		}
 
 		console.log(stadtteil_1);
@@ -177,13 +134,32 @@ $(document).ready(function(){
 			dataType: 'json',
 			success: function(rows){
 				console.log(rows);
-				// for (var i in rows)
-				// {
+				for (var i in rows)
+				{
+					// let val1;
 
-				// 	console.log(rows[i][para_1]);
+					// var id = rows[i].id;
+					// var districtname = rows[i].Stadtteilname;
+					// var population = rows[i].Bevölkerung;
+					// var prozentKids = rows[i].Anteil_der_unter_18Jährigen_in_;
+					// var rentnerProzent = rows[i].Anteil_der_65Jährigen_und_Älteren_in_;
+					// var ausländerProzent = rows[i].Ausländeranteil_in_;
+					// var haushalte = rows[i].Haushalte;
+					// var einpersonenhaushalte = rows[i].Einpersonenhaushalte;
+					// var haushalteKids = rows[i].Haushalte_mit_Kindern;
+					// var bevölkerungsdichte = rows[i].Bevölkerungsdichte;
+					// var geburten = rows[i].Geburten;
+					// var sterben = rows[i].Sterbefälle;
+					// var arbeitslose = rows[i].Arbeitslose;
+					// var durchschnittseinkommen = rows[i].Durchschnittliches_Einkommen_in_EUR;
+					// var wohnungen = rows[i].Wohnungen;
+					// if(para_1 == "Bevölkerung"){
+					// 	val1 = rows[i].Bevölkerung;
+					// }
+					console.log(rows[i][para_1]);
 					
 					
-				// }
+				}
 				setGraph(stadtteil_1,stadtteil_2,stadtteil_3,para_1,rows[0][para_1],rows[1][para_1],rows[2][para_1],para_2,rows[0][para_2],rows[1][para_2],rows[2][para_2],para_3,rows[0][para_3],rows[1][para_3],rows[2][para_3]);
 				
 			}
@@ -240,9 +216,9 @@ function setGraph(district1,district2,district3,para1,val1,val2,val3,para2,val4,
 					var color = d3.scale.category20();
 					var chartHeight = barHeight * zippedData.length + gapBetweenGroups * data.labels.length;
 
-					var x = d3.scale.linear().domain([0, d3.max(zippedData)]).range([0, chartWidth]);
-
-					console.log(x(100));	
+					var x = d3.scale.linear()
+						.domain([0, d3.max(zippedData)])
+						.range([0, chartWidth]);
 
 					var y = d3.scale.linear()
 						.range([chartHeight + gapBetweenGroups, 0]);
@@ -272,8 +248,6 @@ function setGraph(district1,district2,district3,para1,val1,val2,val3,para2,val4,
 						.attr("class", "bar")
 						.attr("width", x)
 						.attr("height", barHeight - 1);
-
-					
 
 					// Add text label in bar
 					bar.append("text")

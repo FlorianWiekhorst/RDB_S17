@@ -17,14 +17,32 @@ if ($conn->connect_error) {
 # Change character set to utf8
 mysqli_set_charset($conn,"utf8");
 
-$sql = "SELECT id,Stadtteilname,Bevölkerung,Anteil_der_unter_18Jährigen_in_,Anteil_der_65Jährigen_und_Älteren_in_,Ausländeranteil_in_,Haushalte,Einpersonenhaushalte,Haushalte_mit_Kindern,Bevölkerungsdichte,Geburten,Sterbefälle,Arbeitslose,Durchschnittliches_Einkommen_in_EUR,Wohnungen FROM Hamburg";
-$result = $conn->query($sql);
+$sql1 = "SELECT ".$_POST['para_1'].",".$_POST['para_2'].",".$_POST['para_3']." FROM Hamburg WHERE Stadtteilname = '" . $_POST['district_1'] . "'";
+$result1 = $conn->query($sql1);
 $data = array();
 
-while ( $row = $result->fetch_assoc())
+while ( $row = $result1->fetch_assoc())
 {
   $data[] = $row;
 }
+$sql2 = "SELECT ".$_POST['para_1'].",".$_POST['para_2'].",".$_POST['para_3']." FROM Hamburg WHERE Stadtteilname = '" . $_POST['district_2'] . "'";
+$result2 = $conn->query($sql2);
+// $data = array();
+
+while ( $row = $result2->fetch_assoc())
+{
+  $data[] = $row;
+}
+
+$sql3 = "SELECT ".$_POST['para_1'].",".$_POST['para_2'].",".$_POST['para_3']." FROM Hamburg WHERE Stadtteilname = '" . $_POST['district_3'] . "'";
+$result3 = $conn->query($sql3);
+// $data = array();
+
+while ( $row = $result3->fetch_assoc())
+{
+  $data[] = $row;
+}
+
 
 echo json_encode( $data );
 
