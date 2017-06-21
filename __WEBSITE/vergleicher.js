@@ -14,7 +14,8 @@ function selectItems() {
         option.text = stadtteile[i];
         selectList.appendChild(option);
     }
-    myDiv.appendChild(selectList);
+    myDiv.appendChild(selectList);   
+											
 
 	// Stadtteil 2 Select Box
     var myDiv2 = document.getElementById("area2");
@@ -47,7 +48,7 @@ function selectItems() {
 	// Create Select Boxes Parameter-Array
 	// Parameter 1 Select Box
 	var myDiv4 = document.getElementById("para1");
-	var parameter1 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in EUR","Wohnungen"];
+	var parameter1 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in EUR","Wohnungen","Wahlbeteiligung","CDU","SPD","GRÜNE","FDP","DIE_LINKE","AfD","Übrige"];
     var selectList4 = document.createElement("select");
     selectList4.setAttribute("id", "parameter1");
     for (var j = 0; j < parameter1.length; j++) {
@@ -60,7 +61,7 @@ function selectItems() {
 	
 	// Parameter 2 Select Box
 	var myDiv5 = document.getElementById("para2");
-	var parameter2 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in EUR","Wohnungen"];
+	var parameter2 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in EUR","Wohnungen","Wahlbeteiligung","CDU","SPD","GRÜNE","FDP","DIE_LINKE","AfD","Übrige"];
     var selectList5 = document.createElement("select");
     selectList5.setAttribute("id", "parameter2");
     for (var j = 0; j < parameter2.length; j++) {
@@ -73,7 +74,7 @@ function selectItems() {
 	
 	// Parameter 3 Select Box
 	var myDiv6 = document.getElementById("para3");
-	var parameter3 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in EUR","Wohnungen"];
+	var parameter3 = ["Bevölkerung","Kinder in %","Rentner in %","Ausländer in %","Haushalte","Einpersonenhaushalte","Haushalte mit Kindern","Bevölkerungsdichte","Geburten","Sterbefälle","Arbeitslose","Durchs. Einkommen in EUR","Wohnungen","Wahlbeteiligung","CDU","SPD","GRÜNE","FDP","DIE_LINKE","AfD","Übrige"];
     var selectList6 = document.createElement("select");
     selectList6.setAttribute("id", "parameter3");
     for (var j = 0; j < parameter3.length; j++) {
@@ -114,7 +115,7 @@ $(document).ready(function(){
 				para_1 = "Anteil_der_65Jährigen_und_Älteren_in_";
 				break;
 			case "Ausländer in %":
-				para_1 = "Anteil_der_Bevölkerung_mit_Migrationshintergrund_in_";
+				para_1 = "Ausländeranteil_in_";
 				break;
 			case "Haushalte mit Kindern":
 				para_1 = "Haushalte_mit_Kindern";
@@ -131,7 +132,7 @@ $(document).ready(function(){
 				para_2 = "Anteil_der_65Jährigen_und_Älteren_in_";
 				break;
 			case "Ausländer in %":
-				para_2 = "Anteil_der_Bevölkerung_mit_Migrationshintergrund_in_";
+				para_2 = "Ausländeranteil_in_";
 				break;
 			case "Haushalte mit Kindern":
 				para_2 = "Haushalte_mit_Kindern";
@@ -148,7 +149,7 @@ $(document).ready(function(){
 				para_3 = "Anteil_der_65Jährigen_und_Älteren_in_";
 				break;
 			case "Ausländer in %":
-				para_3 = "Anteil_der_Bevölkerung_mit_Migrationshintergrund_in_";
+				para_3 = "Ausländeranteil_in_";
 				break;
 			case "Haushalte mit Kindern":
 				para_3 = "Haushalte_mit_Kindern";
@@ -221,7 +222,7 @@ function setGraph(district1,district2,district3,para1,val1,val2,val3,para2,val4,
 						]
 					};
 
-				var chartWidth       = 450,
+				var chartWidth       = 900,
 					barHeight        = 35,
 					groupHeight      = barHeight * data.series.length,
 					gapBetweenGroups = 20,
@@ -270,14 +271,22 @@ function setGraph(district1,district2,district3,para1,val1,val2,val3,para2,val4,
 					bar.append("rect")
 						.attr("fill", function(d,i) { return color(i % data.series.length); })
 						.attr("class", "bar")
-						.attr("width", x)
+						.attr("width", function (d){
+							return x(d);
+						})
+						.attr('x', function(d, i){
+							return x(i);
+						})
+						.attr('y', function(d, i){
+							return chartHeight - y;
+						})
 						.attr("height", barHeight - 1);
 
 					
 
 					// Add text label in bar
 					bar.append("text")
-						.attr("x", function(d) { return x(d) - 3; })
+						.attr("x", function(d) { return x(d) +1; })
 						.attr("y", barHeight / 2)
 						.attr("fill", "red")
 						.attr("dy", ".35em")
@@ -288,7 +297,7 @@ function setGraph(district1,district2,district3,para1,val1,val2,val3,para2,val4,
 						.attr("class", "label")
 						.attr("x", function(d) { return - 10; })
 						.attr("y", groupHeight / 2)
-						.attr("dy", ".5em")
+						.attr("dy", ".35em")
 						.text(function(d,i) {
 						if (i % data.series.length === 0)
 							return data.labels[Math.floor(i/data.series.length)];
@@ -311,7 +320,7 @@ function setGraph(district1,district2,district3,para1,val1,val2,val3,para2,val4,
 						.attr('transform', function (d, i) {
 							var height = legendRectSize + legendSpacing;
 							var offset = -gapBetweenGroups/2;
-							var horz = spaceForLabels + chartWidth + 40 - legendRectSize;
+							var horz = spaceForLabels + chartWidth + 100 - legendRectSize;
 							var vert = i * height - offset;
 							return 'translate(' + horz + ',' + vert + ')';
 						});
